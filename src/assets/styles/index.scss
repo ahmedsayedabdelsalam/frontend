@@ -2,4 +2,12 @@
 
 @tailwind components;
 
+.btn {
+    @apply p-1 rounded-lg shadow-gray-md;
+
+    &:focus {
+        @apply outline-none shadow-outline;
+    }
+}
+
 @tailwind utilities;

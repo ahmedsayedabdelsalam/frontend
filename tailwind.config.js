@@ -11,15 +11,16 @@ module.exports = {
       },
       colors: {
         'dark-blue': {
-          '800': '#151423',
-          '900': '#121220'
+          '700': '#151423',
+          '800': '#121220',
+          '900': '#0e0e19'
         },
       },
       boxShadow: {
         'gray-lg': 'rgba(49, 49, 72, 0.65) 0 -7px 13px 3px',
         'gray-md': 'rgb(49, 49, 72) 0 -4px 10px 2px',
       },
-      fontFamily:{
+      fontFamily: {
         'sans': '"Avenir Next", Helvetica, Arial, sans-serif'
       },
     },
