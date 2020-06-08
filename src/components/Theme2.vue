@@ -1,9 +1,10 @@
 <template>
   <div class="bg-dark-blue-800">
-    <div class="nav box-border grid grid-cols-12 items-center py-5 space-x-8">
-      <div class="logo col-span-1 ml-5">
-        <img src="../assets/images/h-logo.png" alt />
+    <div class="nav box-border grid grid-cols-12 items-center py-8 space-x-8">
+      <div class="logo ml-5 -mt-4 fixed">
+        <img src="../assets/images/h-logo.png" alt="logo" />
       </div>
+      <div class="col-span-1"></div>
       <div class="search col-span-7 relative flex items-center">
         <img src="../assets/images/search.png" alt="search" class="h-4 mx-3 absolute" />
         <input
@@ -32,24 +33,135 @@
     </div>
 
     <div class="grid grid-cols-12 items-start mt-4 box-border space-x-8">
-      <div class="col-span-1"></div>
-      <div
-        class="col-span-7 h-64 bg-cover shadow-gray-lg rounded-xl px-8 py-5 font-mono"
-        :style="{backgroundImage: `url('${require('../assets/images/bg-1.png')}')`}"
-      >
-        <p class="text-4xl text-white font-serif">Hi Jasica!</p>
-        <p class="text-blue-300 font-sans text-sm my-4">
-          Welcome Home! The air quality is good & Fresh you
-          <br />can go out today
-        </p>
-        <div class="weather text-white mt-8">
-          <div class="flex items-center">
-            <span class="text-lg">+25 &deg;C</span>
-            <img src="../assets/images/clouds.png" class="ml-3" alt="clouds" />
+      <div class="col-span-1">
+        <div
+          class="side-nav shadow-gray-lg h-full fixed w-1/12 rounded-r-xl py-16 flex flex-col justify-between"
+        >
+          <div class="flex-col space-y-3">
+            <div class="flex justify-center border-l-4 border-blue-500 py-4">
+              <img class="-ml-2" src="../assets/images/dashboard-icon.png" alt="dashboard" />
+            </div>
+            <div class="flex justify-center border-l-2 border-transparent py-4">
+              <img class="-ml-2" src="../assets/images/ngafa.png" alt="Nagafa" />
+            </div>
+            <div class="flex justify-center py-4">
+              <img class="-ml-2" src="../assets/images/shield.png" alt="Shield" />
+            </div>
+            <div class="flex justify-center py-4">
+              <img class="-ml-2" src="../assets/images/location-pin.png" alt="Location Pin" />
+            </div>
+            <div class="flex justify-center py-4">
+              <img class="-ml-2" src="../assets/images/friends.png" alt="Friends" />
+            </div>
+            <div class="flex justify-center py-4">
+              <img class="-ml-2" src="../assets/images/statistics.png" alt="Statistics" />
+            </div>
           </div>
+          <div class="mb-32">
+            <div class="flex justify-center border-l-2 border-transparent py-4">
+              <img class="-ml-2" src="../assets/images/logout.png" alt="Logout" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-span-7">
+        <div
+          class="h-64 bg-cover shadow-gray-lg rounded-xl px-8 py-5 font-mono"
+          :style="{backgroundImage: `url('${require('../assets/images/bg-1.png')}')`}"
+        >
+          <p class="text-4xl text-white font-serif">Hi Jasica!</p>
+          <p class="text-blue-300 font-sans text-sm my-4">
+            Welcome Home! The air quality is good & Fresh you
+            <br />can go out today
+          </p>
+          <div class="weather text-white mt-8">
+            <div class="flex items-center">
+              <span class="text-lg">+25 &deg;C</span>
+              <img src="../assets/images/clouds.png" class="ml-3" alt="clouds" />
+            </div>
 
-          <p class="text-sm">Outdoor temperature</p>
-          <p class="text-xs font-hairline">Fuzzy cloudy weather</p>
+            <p class="text-sm">Outdoor temperature</p>
+            <p class="text-xs font-hairline">Fuzzy cloudy weather</p>
+          </div>
+        </div>
+        <div class="mt-5 flex justify-between text-white">
+          <div class="text-lg font-semibold">Scarlett’s Home</div>
+          <div class="flex items-center">
+            <span>
+              <img class="inline-block" src="../assets/images/water-drop-blue.png" alt="water drop" />
+              <span class="ml-1 text-sm">35%</span>
+            </span>
+            <span class="ml-6">
+              <img class="inline-block" src="../assets/images/temp-red.png" alt="temprature" />
+              <span class="ml-1 text-sm">25&deg;C</span>
+            </span>
+            <button class="btn px-3 ml-6">
+              <span class="text-xs">Living Room</span>
+              <img
+                class="inline-block ml-10"
+                src="../assets/images/arrow-down-white.png"
+                alt="arrow down"
+              />
+            </button>
+          </div>
+        </div>
+        <div class="mt-5 text-white flex space-x-8">
+          <div class="shadow-gray-lg rounded-xl p-4 w-1/4">
+            <div class="flex justify-between">
+              <span>ON</span>
+              <span class="bg-white bg-purple-700 rounded-full ml-2 w-10 h-5 inline-block">
+                <span
+                  class="w-5 h-5 rounded-full inline-block float-right border border-white bg-white"
+                ></span>
+              </span>
+            </div>
+            <div class="mt-3 h-8">
+              <img src="../assets/images/refridgerator-purple.png" alt="Refridgerator" />
+            </div>
+            <div class="mt-3 text-md font-semibold">Refridgerator</div>
+          </div>
+          <div class="shadow-gray-lg bg-blue-600 rounded-xl p-4 w-1/4">
+            <div class="flex justify-between">
+              <span>ON</span>
+              <span class="bg-white rounded-full ml-2 w-10 h-5 inline-block">
+                <span
+                  class="w-5 h-5 rounded-full inline-block float-right border border-white bg-blue-600"
+                ></span>
+              </span>
+            </div>
+            <div class="mt-3 h-8">
+              <img src="../assets/images/spark-white.png" alt="Temperature" />
+            </div>
+            <div class="mt-3 text-md font-semibold">Temperature</div>
+          </div>
+          <div class="shadow-gray-lg rounded-xl p-4 w-1/4">
+            <div class="flex justify-between">
+              <span>OFF</span>
+              <span class="bg-white bg-gray-500 rounded-full ml-2 w-10 h-5 inline-block">
+                <span
+                  class="w-5 h-5 rounded-full inline-block float-left border border-white bg-white"
+                ></span>
+              </span>
+            </div>
+            <div class="mt-3 h-8">
+              <img src="../assets/images/air-condition-gray.png" alt="Air Conditioner" />
+            </div>
+            <div class="mt-3 text-md font-semibold">Air Conditioner</div>
+          </div>
+          <div class="shadow-gray-lg rounded-xl p-4 w-1/4">
+            <div class="flex justify-between">
+              <span>OFF</span>
+              <span class="bg-white bg-gray-500 rounded-full ml-2 w-10 h-5 inline-block">
+                <span
+                  class="w-5 h-5 rounded-full inline-block float-left border border-white bg-white"
+                ></span>
+              </span>
+            </div>
+            <div class="mt-3 h-8">
+              <img src="../assets/images/lamp-gray.png" alt="Lights" />
+            </div>
+            <div class="mt-3 text-md font-semibold">Lights</div>
+          </div>
         </div>
       </div>
       <div class="col-span-4">
